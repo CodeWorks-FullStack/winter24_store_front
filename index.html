@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css' rel='stylesheet'
+    integrity='sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD' crossorigin='anonymous'>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Spooky Store</title>
+</head>
+
+<body class="bg-warning">
+  <header class="container-fluid bg-black text-danger">
+    <section class="row">
+      <h1> Spooky Store <i class="mdi mdi-halloween"></i></h1>
+    </section>
+  </header>
+
+  <main class="container-fluid">
+    <section class="row">
+      <div class="mb-2">
+        <h2>Spooky Items on Sale</h2>
+        <hr>
+      </div>
+      <div class="col-md-9">
+        <!-- SECTION shop items -->
+        <section class="row py-4 g-2">
+
+          <div class="col-md-4">
+            <div class="card shadow">
+              <img
+                src="https://plus.unsplash.com/premium_photo-1677507322185-9d449e7a51c7?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGxhcmdlJTIwc2tlbGV0b258ZW58MHx8MHx8fDA%3D"
+                alt="">
+              <div class="card-body">
+                <b>10ft Skeleton</b>
+                <p>$249.75</p>
+                <button onclick="addItemByName('10ft Skeleton')" class="btn btn-warning">Add to <i
+                    class="mdi mdi-cart-plus"></i></button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card shadow">
+              <img
+                src="https://plus.unsplash.com/premium_photo-1668363229859-571d01b5a385?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHB1bXBraW58ZW58MHx8MHx8fDA%3D"
+                alt="">
+              <div class="card-body">
+                <b>Pumpkin</b>
+                <p>$5.50</p>
+                <button onclick="addItemByName('pumpkin')" class="btn btn-warning">Add to <i
+                    class="mdi mdi-cart-plus"></i></button>
+                <!-- <button onclick="addItem(0)" class="btn btn-warning">Add to <i class="mdi mdi-cart-plus"></i></button> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card shadow">
+              <img
+                src="https://plus.unsplash.com/premium_photo-1723995894291-b55f9e37321e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dmFtcGlyZSUyMHRlZXRofGVufDB8fDB8fHww"
+                alt="">
+              <div class="card-body">
+                <b>Vampire Teeth</b>
+                <p>$2.99</p>
+                <button onclick="addItemByName('Vampire Teeth')" class="btn btn-warning">Add to <i
+                    class="mdi mdi-cart-plus"></i></button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card shadow">
+              <img
+                src="https://images.unsplash.com/photo-1635442021460-f6ebd6eb9427?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGdob3N0c3xlbnwwfHwwfHx8MA%3D%3D"
+                alt="">
+              <div class="card-body">
+                <b>Ghost Costume</b>
+                <p>$13.99</p>
+                <button onclick="addItemByName('Ghost Costume')" class="btn btn-warning">Add to <i
+                    class="mdi mdi-cart-plus"></i></button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="col-md-3">
+        <div class="card bg-dark text-light">
+          <div class="card-body">
+            <h2>Your Items</h2>
+            <hr>
+            <section id="cart-display">
+
+            </section>
+            <section>
+              <h3>Total: <span id="cart-total"></span></h3>
+            </section>
+            <section>
+              <button onclick="checkout()" class="btn btn-danger">Checkout <i class="mdi mdi-halloween"></i></button>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
