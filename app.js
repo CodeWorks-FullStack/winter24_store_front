@@ -77,8 +77,10 @@ let teams = [
 
 // #endregion ---
 
+// REVIEW these are "imaginary" regions created to try and better manage our applications data and functions
 
-// #region 🗃️ STATE -----
+// #region 🗃️ STATE ----- 
+// NOTE State is responsible for holding the data of an application. Numbers, strings, lists of objects. Try to keep it here
 
 const itemsForSale = [
   {
@@ -107,7 +109,9 @@ console.table(itemsForSale)
 // #endregion -------
 
 // #region 🧠 Logic Functions (any function that modifies the "State")
-// NOTE get in the habit of changing data first, THEN drawing that data to the Document
+// NOTE Logic is basically for our code! or typically what we think of when we think of code.
+// we should try to make sure only functions in the "Logic" section ever change the data in state
+// get in the habit of changing data first, THEN drawing that data to the Document
 
 
 function addVampireTeeth() {
@@ -172,9 +176,14 @@ function checkout() {
 
 //  #endregion --------
 
-
 // #region 🖌️ Visualizers (Functions that "draw" to the document)
+// NOTE visuals or visualizers, is where we create functions that update the document (DOM), usually with data from the state
+// these are often called by one of our logic functions *after they change data
 
+// REVIEW loop breakdown
+//  (start    ;  end condition;  after or what happens after each loop){
+// Code to be repeated or "looped"
+// }
 function drawCart() {
   let content = ''
   for (let i = 0; i < itemsForSale.length; i++) {
